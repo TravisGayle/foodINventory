@@ -222,7 +222,7 @@ margin-right: 100px;
 justify-content: center;
 }
 .flex-container{
-	width: 80%;
+	width: 50%;
 	min-height: 500px;
 	margin: 0 auto;
 	display: -webkit-flex; /* Safari */
@@ -236,12 +236,15 @@ justify-content: center;
 	flex: 1; /* Standard syntax */
 }
 .flex-container .column.bg-alt{
-	background: #b4bac0;
+	/* background: #b4bac0; */
+    background: #dbdfe5;
+
 }
 
+
 .loadImage {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     border: 1px solid green;
 
 }
