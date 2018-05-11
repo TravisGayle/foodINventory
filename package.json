@@ -1,0 +1,23 @@
+{
+  "name": "inventory",
+  "version": "1.0.0",
+  "description": "HCI Project Created by Travis Gayle, Reilly Kearney, Esme Cervantes, and Ronni Sardina Color Palette Dark Primary Color: #388E3C Light Primary Color: #C8E6C9 Primary Color: #4CAF50 Text/Icons: #FFFFFF Accent Color: #FFC107 Primary Text: #212121 Secondary Text: #757575 Divider Color: #BDBDBD",
+  "main": "javascript.js",
+  "dependencies": {
+    "firebase": "^4.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TravisGayle/INventory.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TravisGayle/INventory/issues"
+  },
+  "homepage": "https://github.com/TravisGayle/INventory#readme"
+}
