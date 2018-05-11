@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmstand Inventory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- <script src="web-animations.min.js"></script> -->
+    <script src="velocity.min.js"></script>
+
+    <script src="hammer.min.js"></script>
+
+    <script src="jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta class="foundation-mq">
+
+</head>
+<body>
+    <script src="muuri/muuri.js"></script>
+    <div class="js-off-canvas-overlay is-overlay-fixed"></div>
+    <div class="off-canvas-content" data-off-canvas-content="">
+
+    <div class="title-bar hide-for-large">
+        <div class="title-bar-left">
+            <button class="menu-icon" type="button" data-toggle="my-info" aria-expanded="false" aria-controls="my-info"></button>
+            <!-- <span class="title-bar-title">Mike Mikerson</span> -->
+        </div>
+    </div>
+
+    <div class="callout primary">
+    <article class="grid-container">
+        <div class="header">
+            <div class="cellshrink">
+                <img src="https://wonderwe-prod.s3.amazonaws.com/profile/86877068-ff9b-4f2d-b093-47233bbd0769-goodshepherd-size200x200.png">
+            </div>
+            <h1>Farmstand Inventory</h1>
+        </div>
+    </article>
+</div>
+
+<div class="callin primary actions">
+    <div class="header2">
+        <button type="button" class="btn-lg btn-success sort-asc" >A-Z Sort</button>
+        <button type="button" class="btn-lg btn-success sort-desc">Z-A Sort</button>
+        <button type="button" class="btn-lg btn-success sort-labelfruit">Fruit Sort</button>
+        <button type="button" class="btn-lg btn-success sort-labelveg">Veggie Sort</button>
+        <a class="btn-lg icon-btn btn-success" href="#"><span onclick="addProduce()" id="plus" class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>Add</a>
+        <a class="btn-lg icon-btn btn-danger" href="#"><span onclick="removeProduce()" id="minus" class="glyphicon btn-glyphicon glyphicon-trash img-circle text-danger"></span>Delete</a>
+    </div>
+</div>
+
+
+        <article class="grid-container">
+    <div class="grid">
+
+
+
+      <div class="item">
+        <div class="item-content fruit">
+            <img class="thumbnail" id="apple" onclick="goToInfoPage()" src="./Produce/apple.jpg" data-toggle="modal" data-target="#myModalApple">
+                    <h5>Apple</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content vegetable">
+            <img class="thumbnail" id="kale" onclick="goToInfoPage()" src="./Produce/kale.jpg" data-toggle="modal" data-target="#myModalKale">
+            <h5>Kale</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content vegetable">
+            <img class="thumbnail" id="carrot" onclick="goToInfoPage()" src="./Produce/carrot.jpg" data-toggle="modal" data-target="#myModalCarrot">
+            <h5>Carrot</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content vegetable">
+            <img class="thumbnail" id="garlic" onclick="goToInfoPage()" src="./Produce/garlic.jpg" data-toggle="modal" data-target="#myModalGarlic">
+            <h5>Garlic</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content vegetable">
+            <img class="thumbnail" id="corn" onclick="goToInfoPage()" src="./Produce/corn.jpg" data-toggle="modal" data-target="#myModalCorn">
+            <h5>Corn</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content fruit">
+            <img class="thumbnail" id="kiwi" onclick="goToInfoPage()" src="./Produce/kiwi.jpg" data-toggle="modal" data-target="#myModalKiwi">
+            <h5>Kiwi</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content fruit">
+            <img class="thumbnail" id="grape" onclick="goToInfoPage()" src="./Produce/grape.jpg" data-toggle="modal" data-target="#myModalGrape">
+            <h5>Grape</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content vegetable">
+            <img class="thumbnail" id="lettuce" onclick="goToInfoPage()" src="./Produce/lettuce.jpg" data-toggle="modal" data-target="#myModalLettuce">
+            <h5>Lettuce</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content fruit">
+            <img class="thumbnail" id="pomegranate" onclick="goToInfoPage()" src="./Produce/pomegranate.jpg" data-toggle="modal" data-target="#myModalPomegranate">
+            <h5>Pomegranate</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content vegetable">
+            <img class="thumbnail" id="onion" onclick="goToInfoPage()" src="./Produce/onion.jpg" data-toggle="modal" data-target="#myModalOnion">
+            <h5>Onion</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content fruit">
+            <img class="thumbnail" id="mango" onclick="goToInfoPage()" src="./Produce/mango.jpg" data-toggle="modal" data-target="#myModalMango">
+            <h5>Mango</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content fruit">
+            <img class="thumbnail" id="orange" onclick="goToInfoPage()" src="./Produce/orange.jpeg" data-toggle="modal" data-target="#myModalOrange">
+            <h5>Orange</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content vegetable">
+            <img class="thumbnail" id="broccoli" onclick="goToInfoPage()" src="./Produce/broccoli.jpg" data-toggle="modal" data-target="#myModalBroccoli">
+            <h5>Broccoli</h5>
+
+       </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content fruit">
+            <img class="thumbnail" id="tomato" onclick="goToInfoPage()" src="./Produce/tomato.jpg" data-toggle="modal" data-target="#myModalTomato">
+            <h5>Tomato</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content fruit">
+            <img class="thumbnail" id="blueberry" onclick="goToInfoPage()" src="./Produce/blueberry.jpg" data-toggle="modal" data-target="#myModalBlueberry">
+            <h5>Blueberry</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content vegetable">
+            <img class="thumbnail" id="potato" onclick="goToInfoPage()" src="./Produce/potato.jpg" data-toggle="modal" data-target="#myModalPotato">
+            <h5>Potato</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content vegetable">
+            <img class="thumbnail" id="spinach" onclick="goToInfoPage()" src="./Produce/spinach.jpg" data-toggle="modal" data-target="#myModalSpinach">
+            <h5>Spinach</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content fruit">
+            <img class="thumbnail" id="strawberry" onclick="goToInfoPage()" src="./Produce/strawberry.jpg" data-toggle="modal" data-target="#myModalStrawberry">
+            <h5>Strawberry</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content fruit">
+            <img class="thumbnail" id="cherry" onclick="goToInfoPage()" src="./Produce/cherry.jpeg" data-toggle="modal" data-target="#myModalCherry">
+            <h5>Cherry</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content vegetable">
+            <img class="thumbnail" id="cabbage" onclick="goToInfoPage()" src="./Produce/cabbage.jpg" data-toggle="modal" data-target="#myModalCabbage">
+            <h5>Cabbage</h5>
+        </div>
+      </div>
+
+      <!-- <div class="item">
+        <div class="item-content">
+            <img class="thumbnail" onclick="addProduce()" id="plus" src="./Produce/plus.png" data-toggle="modal" data-target="#myModalPlus">
+        </div>
+      </div> -->
+
+    </div>
+</article>
+</div>
+<script src="javascript.js"></script>
+
+
+</body>
+</html>
